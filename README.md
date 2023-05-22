@@ -20,7 +20,6 @@ Lightweight keyboard area override widgets fixer.
   - [Features](#features)
   - [Getting started](#getting-started)
   - [Usage](#usage)
-  - [Contributors](#contributors)
 
 ## Features
 
@@ -55,7 +54,3 @@ void main() {
   );
 }
 ```
-
-## Contributors
-
-![Contributors](https://contrib.rocks/image?repo=msayed-net/keyboard_area_handler)
