@@ -1,38 +1,37 @@
-# palestine_connection
+# keyboard_area_handler
 
-## Part of [PalestineDevelopers](https://github.com/PalestineDevelopers)
+Lightweight keyboard area override widgets fixer.
 
-Lightweight internet connection test, lookup Google domain.
+[![License](https://img.shields.io/github/license/msayed-net/keyboard_area_handler?style=for-the-badge)](https://github.com/msayed-net)
+[![Pub](https://img.shields.io/badge/Keyboard%20Area%20Handler-pub-blue?style=for-the-badge)](https://pub.dev/packages/keyboard_area_handler)
+[![Example](https://img.shields.io/badge/Example-Ex-success?style=for-the-badge)](https://pub.dev/packages/keyboard_area_handler/example)
 
-[![License](https://img.shields.io/github/license/PalestineDevelopers/connection?style=for-the-badge)](https://github.com/PalestineDevelopers)
-[![Pub](https://img.shields.io/badge/Palestine%20Connection-pub-blue?style=for-the-badge)](https://pub.dev/packages/palestine_connection)
-[![Example](https://img.shields.io/badge/Example-Ex-success?style=for-the-badge)](https://pub.dev/packages/palestine_connection/example)
+[![PUB](https://img.shields.io/pub/v/keyboard_area_handler.svg?style=for-the-badge)](https://pub.dev/packages/keyboard_area_handler)
+[![GitHub release](https://img.shields.io/github/v/release/msayed-net/keyboard_area_handler?style=for-the-badge)](https://github.com/msayed-net/keyboard_area_handler/releases)
+[![GitHub stars](https://img.shields.io/github/stars/msayed-net/keyboard_area_handler?style=for-the-badge)](https://github.com/msayed-net/keyboard_area_handler)
+[![GitHub forks](https://img.shields.io/github/forks/msayed-net/keyboard_area_handler?style=for-the-badge)](https://github.com/msayed-net/keyboard_area_handler)
 
-[![PUB](https://img.shields.io/pub/v/palestine_connection.svg?style=for-the-badge)](https://pub.dev/packages/palestine_connection)
-[![GitHub release](https://img.shields.io/github/v/release/PalestineDevelopers/connection?style=for-the-badge)](https://github.com/PalestineDevelopers/connection/releases)
-[![GitHub stars](https://img.shields.io/github/stars/PalestineDevelopers/connection?style=for-the-badge)](https://github.com/PalestineDevelopers/connection)
-[![GitHub forks](https://img.shields.io/github/forks/PalestineDevelopers/connection?style=for-the-badge)](https://github.com/PalestineDevelopers/connection)
-
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FPalestineDevelopers%2Fconnection%2Fbadge%3Fref%3Dmain&style=for-the-badge)](https://actions-badge.atrox.dev/PalestineDevelopers/connection/goto?ref=main)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fmsayed-net%keyboard_area_handler%2Fbadge%3Fref%3Dmain&style=for-the-badge)](https://actions-badge.atrox.dev/msayed-net/keyboard_area_handler/goto?ref=main)
 
 ## Table Of Contents
 
-* [Features](#features)
-* [Getting started](#getting-started)
-* [Usage](#usage)
-* [Contributors](#contributors)
+- [keyboard\_area\_handler](#keyboard_area_handler)
+  - [Table Of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Getting started](#getting-started)
+  - [Usage](#usage)
+  - [Contributors](#contributors)
 
 ## Features
 
-* Periodic internet connection tests
-* dispose method
+- KeyboardAreaHandler(): Fixes keyboard override widgets
 
 ## Getting started
 
 To start, import package
 
 ```dart
-import 'package:palestine_connection/palestine_connection.dart';
+import 'package:keyboard_area_handler/keyboard_area_handler.dart';
 ```
 
 ## Usage
@@ -40,39 +39,23 @@ import 'package:palestine_connection/palestine_connection.dart';
 Just as easy as this
 
 ```dart
-final PalConnection connection = PalConnection();
-connection.initialize(
-    domain: PalDomain.random, // Domain To Test On (optional)
-    periodicInSeconds: 3, // 3 seconds
-    onConnectionLost: () {
-      // No Internet
-    },
-    onConnectionRestored: () {
-      // Internet is back
-    },
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(
+    const MaterialApp(
+      home: KeyboardAreaHandler(
+        child: Scaffold(
+          body: Center(
+            child: Text('Hello, World!'),
+          ),
+        ),
+      ),
+    ),
   );
-```
-
-It could get more easier actually
-
-```dart
-PalConnection().initialize(
-    periodicInSeconds: 3, // 3 seconds
-    onConnectionLost: () {
-      // No Internet
-    },
-    onConnectionRestored: () {
-      // Internet is back
-    },
-  );
-```
-
-Then you could dispose it
-
-```dart
-connection.dispose();
+}
 ```
 
 ## Contributors
 
-![Contributors](https://contrib.rocks/image?repo=palestinedevelopers/connection)
+![Contributors](https://contrib.rocks/image?repo=msayed-net/keyboard_area_handler)

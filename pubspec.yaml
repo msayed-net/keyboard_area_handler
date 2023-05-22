@@ -1,12 +1,16 @@
-name: palestine_connection
-description: Lightweight internet connection test, lookup any provided domain.
-version: 0.0.21
+name: keyboard_area_handler
+description: Lightweight keyboard area override widgets fixer.
+version: 0.0.1
 
-homepage: https://github.com/msayed-net/PalestineDevelopers
+homepage: https://github.com/msayed-net/keyboard_area_handler
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
+dependencies:
+  flutter:
+    sdk: flutter
+
 dev_dependencies:
-  lint: ^1.7.2
-  test: ^1.20.1
+  dart_code_metrics: ^5.7.4
+  dart_code_metrics_presets: ^1.8.0
